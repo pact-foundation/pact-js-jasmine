@@ -1,11 +1,8 @@
 language: node_js
 node_js:
-- '5'
 - '4'
-- '0.12'
+- '6'
 env:
-  global:
-  - secure: kg3NTdBducH5ySzXfArvSraycoXoPDV3VpFXtR/tY84MBWNEs0sejGCsGyN3y9/IHch0Skm4w8cFEpWRvGk4fEA0bVUQTUFb6xeuzkMCSfQEV9dY6jz8c1niypx3VbzHL1pdZSzV2UiV6PXj7XoDCDwL6zHW8WI+dElrQ6wmSM4UKYEknQPNAJ6NLON9gyL3kLJjoVO7gtsqWb5sFPP5Dq1zi+gjOYwCR50G9PSRSjRDQYdwOghtbWK/zvl7pfF7hfdLQ9f8tBmFP5Z4vCfDqsoGy3/jg8VIJoEHIdkHaRhD4qfN+oed8drNz+swaZ76FjcEWskKVbIuUQ7eVtjmiU3twPIs/BWfuN0RafJ5STVOzDq53t9wzf2SGsol068XLInetjcpcgJ+vdfyXVVgwGEJ1zED6d/NRpYg/hT/aZp4XtURgu0YpIObyVJhdIEZEE1Zhcey/S7KRLbAiHnNyZ0KVYKinAsSERPAzJ0AyaVZJDqkRUFbjjVeE/yQpvE3KWRw3ZNmmhet9yrkVKUleaEIWfvu4HdClFMC4moIYYGuT+TG48oUP/UYpKOEGOwqmgnt1FKkyQjiNVQ6rjsMAwT3F4BaK9Hn04p5eTPh2wCrou0lDZI7SzOo/np0XpZAFFJduWCo8qFaJOzJwSIHkPo4yLjaSDJT4HAiFhl428E=
   matrix:
   - CXX=g++-4.8
 addons:
@@ -19,4 +16,4 @@ before_install:
 install: npm install
 script: npm test
 after_success:
-- codeclimate-test-reporter < ./coverage/lcov.info
+- npm run coverage

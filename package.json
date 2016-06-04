@@ -4,6 +4,7 @@
   "description": "Jasmine Custom Interface for Pact",
   "main": "./src/index.js",
   "scripts": {
+    "coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "standard",
     "jscpd": "jscpd -p src -r json -o jscpd.json",
     "pretest": "npm run lint && npm run jscpd",
@@ -11,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tarciosaraiva/pact-jasmine-interface.git"
+    "url": "git+https://github.com/pact-foundation/pact-js-jasmine.git"
   },
   "bugs": {
-    "url": "https://github.com/tarciosaraiva/pact-jasmine-interface/issues"
+    "url": "https://github.com/pact-foundation/pact-js-jasmine/issues"
   },
   "homepage": "http://docs.pact.io/documentation/javascript.html",
   "keywords": [
@@ -29,7 +30,7 @@
     ]
   },
   "devDependencies": {
-    "codeclimate-test-reporter": "0.3.1",
+    "coveralls": "2.11.9",
     "istanbul": "0.4.3",
     "jscpd": "0.6.1",
     "standard": "7.1.1"
@@ -37,7 +38,7 @@
   "dependencies": {
     "@pact-foundation/pact-node": "4.1.1",
     "jasmine": "2.4.1",
-    "pact": "tarciosaraiva/pact-js"
+    "pact": "pact-foundation/pact-js"
   },
   "optionalDependencies": {
     "mitm": "1.2.1"
