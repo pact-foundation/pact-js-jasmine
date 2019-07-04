@@ -8,7 +8,9 @@
     "lint": "standard",
     "jscpd": "jscpd -p src -r json -o jscpd.json",
     "pretest": "npm run lint && npm run jscpd",
-    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/jasmine"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/jasmine",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -38,9 +40,11 @@
   "dependencies": {
     "@pact-foundation/pact-node": "4.1.1",
     "jasmine": "2.4.1",
-    "pact": "pact-foundation/pact-js"
+    "pact": "pact-foundation/pact-js",
+    "snyk": "^1.189.0"
   },
   "optionalDependencies": {
     "mitm": "1.2.1"
-  }
+  },
+  "snyk": true
 }
