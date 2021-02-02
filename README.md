@@ -1,3 +1,8 @@
+# Archived
+
+This project is archived because it seems to never have had any code in it. If you're looking for a jasmine wrapper for pact, please open an issue on https://github.com/pact-foundation/jest-pact - it would only require small changes to be jasmine specific, we just haven't released one because we don't think many people are using Jasmine directly these days.
+
+
 # Pact Jasmine Interface
 Jasmine Custom Interface to run Pact.
 
